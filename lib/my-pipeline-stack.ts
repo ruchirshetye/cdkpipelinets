@@ -8,7 +8,7 @@ export class MyPipelineStack extends cdk.Stack {
     super(scope, id, props);
 
     const pipeline = new CodePipeline(this, 'Pipeline', {
-      pipelineName: 'MyPipeline',
+      pipelineName: 'MyPipelineNewNow',
       synth: new ShellStep('Synth', {
         input: CodePipelineSource.gitHub('ruchirshetye/cdkpipelinets', 'main'),
         commands: ['npm ci', 'npm run build', 'npx cdk synth']
